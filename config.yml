@@ -2,7 +2,7 @@
 
 orgName: devops-lab
 
-environment:
+environments:
   dev:
     region: eastus2
     servicePrinciple: 00000001-0000-0000-c000-000000000000 ## fake value for demo purpose
@@ -22,7 +22,7 @@ environment:
     resourceGroup: devops-prod-rg ## fake value for demo purpose
     adminUserKey: PLACEHOLDER ## fake value for demo purpose
 
-template:
+templates:
   azure-vm-python3:
     arm: azure-vm.json
     param: azure-vm.parameters.json
@@ -36,7 +36,7 @@ template:
     default:
       someVar: someValue ## fake value for demo purpose
 
-artifactType:
+artifactTypes:
   python:
     index-url: http://nexus:8081/repository/pypi-central/simple
     extra-index-url: http://nexus:8081/repository/pypi/simple
