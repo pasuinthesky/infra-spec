@@ -1,0 +1,43 @@
+---
+
+orgName: devops-lab
+
+environment:
+  dev:
+    region: eastus2
+    servicePrinciple: 00000001-0000-0000-c000-000000000000 ## fake value for demo purpose
+    subscription: b7135393-f28b-4a35-b97a-6bfdf67cc3ef ## fake value for demo purpose
+    resourceGroup: devops-dev-rg ## fake value for demo purpose
+    adminUserKey: PLACEHOLDER ## fake value for demo purpose
+  qa: 
+    region: eastus
+    servicePrinciple: 3b2cc337-96ee-4339-bafb-38ab27f0f77e
+    subscription: b7135393-f28b-4a35-b97a-6b68abbd309e
+    resourceGroup: devops-lab-rg
+    adminUserKey: /subscriptions/b7135393-f28b-4a35-b97a-6b68abbd309e/resourceGroups/myResourceGroup/providers/Microsoft.KeyVault/vaults/myvault-3721
+  prod: 
+    region: centralus
+    servicePrinciple: 00000001-0000-0000-c000-000000000000 ## fake value for demo purpose
+    subscription: b7135393-f28b-4a35-b97a-85f3abe46ad7 ## fake value for demo purpose
+    resourceGroup: devops-prod-rg ## fake value for demo purpose
+    adminUserKey: PLACEHOLDER ## fake value for demo purpose
+
+template:
+  azure-vm-python3:
+    arm: azure-vm.json
+    param: azure-vm.parameters.json
+    script: python3.sh
+    default:
+      someVar: someValue ## fake value for demo purpose
+  azure-ase-python: 
+    arm: azure-ase-python.json ## fake value for demo purpose
+    param: azure-ase-python.parameters.json ## fake value for demo purpose
+    script: python-ase.sh ## fake value for demo purpose
+    default:
+      someVar: someValue ## fake value for demo purpose
+
+artifactType:
+  python:
+    index-url: http://nexus:8081/repository/pypi-central/simple
+    extra-index-url: http://nexus:8081/repository/pypi/simple
+    trusted-host: nexus

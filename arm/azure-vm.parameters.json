@@ -1,0 +1,37 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "vmName": {
+      "value": "INFRA-SPEC-PLACEHOLDER"
+    },
+    "VmSize": {
+      "value": "INFRA-SPEC-PLACEHOLDER"
+    },
+    "adminUsername": {
+      "value": "devops"
+    },
+    "adminPassword": {
+      "reference": {
+        "keyVault": {
+          "id": "INFRA-SPEC-PLACEHOLDER"
+        },
+        "secretName": "admin-password"
+      }
+    },
+    "adminSshKey": {
+      "reference": {
+        "keyVault": {
+          "id": "INFRA-SPEC-PLACEHOLDER"
+        },
+        "secretName": "admin-key"
+      }
+    },
+    "dnsLabelPrefix": {
+      "value": "INFRA-SPEC-PLACEHOLDER"
+    },
+    "configAppUri": {
+      "value": "INFRA-SPEC-PLACEHOLDER"
+    }
+  }
+}
