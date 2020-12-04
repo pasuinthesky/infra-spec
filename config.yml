@@ -4,17 +4,14 @@ orgName: devops-lab
 
 environments:
   dev:
-    region: eastus2
     servicePrinciple: devops-lab-jenkins-dev
     resourceGroup: devops-lab-dev-rg
     adminUserKey: PLACEHOLDER ## fake value for demo purpose
   qa: 
-    region: eastus
     servicePrinciple: devops-lab-jenkins-qa
     resourceGroup: devops-lab-qa-rg
     adminUserKey: /subscriptions/b7135393-f28b-4a35-b97a-6b68abbd309e/resourceGroups/myResourceGroup/providers/Microsoft.KeyVault/vaults/myvault-3721
   prod: 
-    region: centralus
     servicePrinciple: devops-lab-jenkins-prod
     resourceGroup: devops-lab-prod-rg
     adminUserKey: PLACEHOLDER ## fake value for demo purpose
