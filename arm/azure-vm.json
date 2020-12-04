@@ -71,7 +71,7 @@
         "description": "Location for all resources."
       }
     },
-    "VmSize": {
+    "vmSize": {
       "type": "string",
       "defaultValue": "Standard_B1s",
       "metadata": {
@@ -224,7 +224,7 @@
       ],
       "properties": {
         "hardwareProfile": {
-          "vmSize": "[parameters('VmSize')]"
+          "vmSize": "[parameters('vmSize')]"
         },
         "storageProfile": {
           "osDisk": {
