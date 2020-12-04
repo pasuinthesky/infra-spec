@@ -32,6 +32,9 @@
     },
     "configAppUri": {
       "value": "INFRA-SPEC-PLACEHOLDER"
+    },
+    "configAppCmd": {
+      "value": "INFRA-SPEC-PLACEHOLDER"
     }
   }
 }

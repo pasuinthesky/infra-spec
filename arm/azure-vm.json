@@ -51,6 +51,12 @@
         "description": "Github uri of customer script to install application."
       }
     },
+    "configAppCmd": {
+      "type": "string",
+      "metadata": {
+        "description": "Shell command to install application."
+      }
+    },
     "ubuntuOSVersion": {
       "type": "string",
       "defaultValue": "18.04-LTS",
@@ -274,7 +280,7 @@
         "settings": {
         },
         "protectedSettings": {
-          "commandToExecute": "bash setup-docker-compose.sh",
+          "commandToExecute": "[parameters('configAppCmd')]",
           "fileUris": [ "[parameters('configAppUri')]" ]
         }
       }
