@@ -1,4 +1,4 @@
- @Library('jkns-lib@main')_ 
+@Library('jkns-lib@main')_
 import org.devopslab.Constants
 
 pipeline {
@@ -114,6 +114,7 @@ pipeline {
                         script: deploy.cmd
                     )
                     def jsonObj = readJSON text: deploy.stdOut
+                    println (jsonObj)
                 }
             }
         }
